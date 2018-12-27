@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 
-import NotFound from './notfound'
-import Team from './team'
-import Teams from './teams'
+import Header from './common/header'
+import NotFound from './common/notfound'
+import TeamContainer from './team/team-container'
+import TeamsContainer from './teams/teams-container'
 
 const routes = [
-  <Route exact key="teams" path="/" component={Teams} />,
-  <Route key="team" path="/team" component={Team} />,
+  <Route exact key="teams" path="/" component={TeamsContainer} />,
+  <Route key="team" path="/team" component={TeamContainer} />,
   <Route key="404" component={NotFound} />
 ]
 
@@ -16,6 +17,7 @@ export class App extends Component {
     return (
       <Router>
         <div>
+          <Header />
           <Switch>
             {routes}
           </Switch>

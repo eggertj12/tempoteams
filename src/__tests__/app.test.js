@@ -4,9 +4,9 @@ import { MemoryRouter } from 'react-router'
 import Adapter from 'enzyme-adapter-react-16'
 
 import App from '../app'
-import NotFound from '../notfound'
-import Team from '../team'
-import Teams from '../teams'
+import NotFound from '../common/notfound'
+import TeamContainer from '../team/team-container'
+import TeamsContainer from '../teams/teams-container'
 
 Enzyme.configure({ adapter: new Adapter() })
 
@@ -16,8 +16,8 @@ test('empty path should render Teams', () => {
       <App />
     </MemoryRouter>
   )
-  expect(wrapper.find(Teams)).toHaveLength(1)
-  expect(wrapper.find(Team)).toHaveLength(0)
+  expect(wrapper.find(TeamsContainer)).toHaveLength(1)
+  expect(wrapper.find(TeamContainer)).toHaveLength(0)
 })
 
 test('invalid path should render NotFound', () => {
@@ -27,5 +27,5 @@ test('invalid path should render NotFound', () => {
     </MemoryRouter>
   )
   expect(wrapper.find(NotFound)).toHaveLength(1)
-  expect(wrapper.find(Teams)).toHaveLength(0)
+  expect(wrapper.find(TeamsContainer)).toHaveLength(0)
 })
