@@ -1,13 +1,14 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
+
+import Teams from './teams'
+import LoadingContainer from '../common/loading-container'
 
 export class TeamsContainer extends Component {
   render() {
     return (
-      <div>
-        This is teams component
-        <br /><Link to="/team">Team</Link>
-      </div>
+      <LoadingContainer items="teams">
+        <Teams />
+      </LoadingContainer>
     )
   }
 }

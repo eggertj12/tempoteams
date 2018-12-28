@@ -2,15 +2,13 @@ import React from 'react'
 import Enzyme, { mount } from 'enzyme'
 import Adapter from 'enzyme-adapter-react-16'
 
-import Team from '../team'
+import TeamContainer from '../team-container'
 
 Enzyme.configure({ adapter: new Adapter() })
+jest.mock('../../utils/repository')
 
-describe('Team', () => {
-  const data = {
-    'name': 'Some team',
-  }
+describe('TeamContainer', () => {
   it('renders without crashing', () => {
-    mount(<Team data={data} />)
+    const welcome = mount(<TeamContainer />)
   })
 })

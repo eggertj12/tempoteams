@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 
+import Team from './team'
+import LoadingContainer from '../common/loading-container'
+
 export class TeamContainer extends Component {
   render() {
     return (
-      <div>
-        This is team component
-      </div>
+      <LoadingContainer items="team" id={this.props.team}>
+        <Team />
+      </LoadingContainer>
     )
   }
 }

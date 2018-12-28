@@ -8,7 +8,8 @@ const config = {
     path: path.resolve(__dirname, 'dist')
   },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    historyApiFallback: true
   },
   module: {
     rules: [
@@ -25,7 +26,7 @@ const config = {
 module.exports = (env, argv) => {
 
   if (argv.mode === 'development') {
-    config.devtool = 'inline-source-map';
+    config.devtool = 'inline-source-map'
   }
 
   return config

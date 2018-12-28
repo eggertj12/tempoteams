@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LoadingContainer renders Child on success 1`] = `
+<p
+  data={Array []}
+/>
+`;
+
+exports[`LoadingContainer renders Error on failure 1`] = `
+<p>
+  ERROR!
+</p>
+`;
+
+exports[`LoadingContainer renders Loading before promise is resolved 1`] = `
+<p>
+  Loading ...
+</p>
+`;

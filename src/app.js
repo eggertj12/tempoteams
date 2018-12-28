@@ -8,7 +8,7 @@ import TeamsContainer from './teams/teams-container'
 
 const routes = [
   <Route exact key="teams" path="/" component={TeamsContainer} />,
-  <Route key="team" path="/team" component={TeamContainer} />,
+  <Route key="team" path="/team/:team" component={({ match }) => <TeamContainer team={match.params.team} />} />,
   <Route key="404" component={NotFound} />
 ]
 

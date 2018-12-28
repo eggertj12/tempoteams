@@ -9,6 +9,8 @@ import TeamContainer from '../team/team-container'
 import TeamsContainer from '../teams/teams-container'
 
 Enzyme.configure({ adapter: new Adapter() })
+jest.mock('../utils/repository')
+
 
 test('empty path should render Teams', () => {
   const wrapper = mount(
