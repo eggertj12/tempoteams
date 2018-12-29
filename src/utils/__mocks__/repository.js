@@ -1,4 +1,4 @@
-const repo = jest.genMockFromModule('fs');
+const repo = jest.genMockFromModule('fs')
 
 const resolves = new Promise((resolve) => {
   resolve([])
@@ -27,4 +27,4 @@ repo.__shouldFail = () => {
   promise = rejects
 }
 
-module.exports = repo;
+module.exports = repo

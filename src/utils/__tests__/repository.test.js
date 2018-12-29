@@ -34,8 +34,20 @@ describe('repository get function', () => {
     expect(global.fetch.mock.calls[0][0]).toEndWith('team/3/')
   })
 
+  it('calls user endpoint for getting users', () => {
+    get('users')
+
+    expect(global.fetch.mock.calls[0][0]).toEndWith('user/')
+  })
+
+  it('calls user endpoint with id for getting user details', () => {
+    get('user', 3)
+
+    expect(global.fetch.mock.calls[0][0]).toEndWith('user/3/')
+  })
+
   it('returns a promise that resolves to returned data', () => {
-    expect.assertions(1);
+    expect.assertions(1)
     givenData({
       'name': 'Awesome team',
     })
@@ -48,7 +60,7 @@ describe('repository get function', () => {
   })
 
   it('returns a rejected promise on invalid items requested', () => {
-    expect.assertions(1);
+    expect.assertions(1)
     return get('foobar').catch(e =>
       expect(e).toEqual('Invalid items requested'),
     )

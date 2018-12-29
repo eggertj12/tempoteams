@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router-dom'
 
 import Filter from '../common/filter'
+import LoadingContainer from '../common/loading-container'
+import TeamRow from './team-row'
 
 export class Teams extends Component {
   constructor(props) {
@@ -24,8 +25,14 @@ export class Teams extends Component {
   render() {
     return (
       <div>
-        <Filter onFilter={this.filterTeams} />
-        {this.state.teams.map(team => { return <div className='team' key={team.id}><Link to={`/team/${team.id}/`}>{team.name}</Link></div> })}
+        Filter teams: <Filter onFilter={this.filterTeams} />
+        {this.state.teams.map(team => {
+          return (
+            <LoadingContainer key={team.id} items='team' id={team.id}>
+              <TeamRow />
+            </LoadingContainer>
+          )
+        })}
       </div>
     )
   }

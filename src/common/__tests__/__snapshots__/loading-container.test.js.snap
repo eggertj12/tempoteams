@@ -7,13 +7,13 @@ exports[`LoadingContainer renders Child on success 1`] = `
 `;
 
 exports[`LoadingContainer renders Error on failure 1`] = `
-<p>
+<span>
   ERROR!
-</p>
+</span>
 `;
 
 exports[`LoadingContainer renders Loading before promise is resolved 1`] = `
-<p>
+<span>
   Loading ...
-</p>
+</span>
 `;
