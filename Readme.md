@@ -4,7 +4,7 @@ Sample application for Tempo to assess quality of code
 
 ## Approach
 
-Built using `React` using `webpack` for bundling and `styled-components` for styling. Testing with `jest` and `enzyme`. Development server with hotreloading provided with `webpack-dev-server`.
+Built using `React` using `webpack` for bundling and `styled-components` for styling. Testing with `jest` and `enzyme`. Development server with hot reloading provided with `webpack-dev-server`.
 
 Previously when I have started projects, whatever the tech being used, I have normally used some sort of bootstrapping toolkit since I wanted to get started as quickly as possible without hassle. This time I decided to build the app and it's stack from scratch and do all the configuring myself to refresh my skills. So this app is totally custom built, if there are any questions about the choices made please contact me.
 
@@ -33,7 +33,7 @@ Then run development server
 npm start
 ```
 
-It should open a browser automatically. If not you can manually go to (http://localhost:8080)[localhost:8080]
+It should open a browser automatically. If not you can manually go to [localhost:8080](http://localhost:8080)
 
 ## Tests
 
