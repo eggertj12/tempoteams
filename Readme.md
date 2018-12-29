@@ -18,19 +18,13 @@ It's pretty standard. Requirements for running
 Install dependencies
 
 ```
-npm i
-```
-
-or 
-
-```
-yarn
+npm i / yarn
 ```
 
 Then run development server
 
 ```
-npm start
+npm start / yarn start
 ```
 
 It should open a browser automatically. If not you can manually go to [localhost:8080](http://localhost:8080)
@@ -40,13 +34,13 @@ It should open a browser automatically. If not you can manually go to [localhost
 Tests are as mentioned previously done with `jest` and `enzyme`. To run tests simply
 
 ```
-npm test
+npm test / yarn test
 ```
 
 To run specific tests use (as normally when using `jest`)
 
 ```
-npm test <pattern>
+npm test <pattern> / yarn test <pattern>
 ```
 
 where `<pattern>` is matched agains test filenames.
@@ -56,7 +50,7 @@ where `<pattern>` is matched agains test filenames.
 If you for some reason would like to build for production that is done with 
 
 ```
-npm build
+npm run build / yarn build
 ```
 
 Resulting artifacts are found in `/dist` folder and can be uploaded to server. Further configuration of server to support client side routing is outside of the scope of this readme.
