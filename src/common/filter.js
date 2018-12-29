@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import styled from 'styled-components'
+
 
 export class Filter extends Component {
 
@@ -15,9 +17,15 @@ export class Filter extends Component {
 
   render() {
     return (
-      <input type="text" onChange={this.inputChanged} />
+      <StyledInput type="text" onChange={this.inputChanged} />
     )
   }
 }
 
 export default Filter
+
+const StyledInput = styled.input`
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+`
